@@ -1,0 +1,17 @@
+:root {
+  --primary-color: #e54065;
+  --background-color: #f4f5f9;
+  --border-color: #cfd2dc;
+  --text-color: #636363;
+  --filter-button: #e1e4ea;
+  --read-background: #f2f2f2;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.mainContainer {
+  padding: 1rem 3rem;
+}

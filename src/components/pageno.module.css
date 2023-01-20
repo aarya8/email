@@ -1,0 +1,14 @@
+.circle {
+  background-color: #e1e4ea;
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  padding: 0.5rem;
+  margin-left: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pageContainer {
+  padding: 1rem;
+}

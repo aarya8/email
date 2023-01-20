@@ -1,0 +1,12 @@
+.flex {
+  display: flex;
+  gap: 2%;
+}
+.blo {
+  flex-basis: 100%;
+}
+.body {
+  height: 100vh;
+  border: 1px solid black;
+  flex-basis: 100%;
+}

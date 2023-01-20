@@ -1,0 +1,23 @@
+.filterContainer {
+  list-style-type: none;
+  color: black;
+
+  display: flex;
+  gap: 2%;
+  width: 80%;
+  padding-left: 0;
+}
+.filterButton {
+  padding: 0.2rem 1rem;
+  display: block;
+  border-radius: 10px;
+}
+.filterButton:hover {
+  cursor: pointer;
+}
+.activeButton {
+  padding: 0.2rem 1rem;
+  display: block;
+  border-radius: 10px;
+  background-color: #e1e4ea;
+}

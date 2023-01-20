@@ -1,0 +1,42 @@
+.body {
+  padding: 1rem 2rem 1rem 0;
+  position: relative;
+  border: 1px solid #cfd2dc;
+  border-radius: 10px;
+  display: flex;
+  color: #636363;
+  flex-basis: 100%;
+}
+.subject {
+  font-size: 24px;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+.figure {
+  width: 50px;
+  margin: 0.5rem 1rem;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #e54065;
+  border-radius: 50%;
+}
+
+.avatarWord {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+.favoriteButton {
+  background-color: #e54065;
+  border: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 30px;
+}

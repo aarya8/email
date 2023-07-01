@@ -1,9 +1,10 @@
-import { useEmail } from "../context/EmailContext";
+import React from "react";
+import { useData } from "../context/DataContext";
 import styles from "./filter.module.css";
 
 export const Filter = () => {
-  const { filter, dispatch } = useEmail();
-  function addFilterData(filter) {
+  const { filter, dispatch } = useData();
+  function addFilterData(filter: string) {
     dispatch({
       type: "ADD_FILTER",
       payload: filter,
@@ -37,6 +38,9 @@ export const Filter = () => {
           onClick={() => addFilterData("favorites")}
         >
           Favorites
+        </li>
+        <li className={styles.filterButton} onClick={() => addFilterData("")}>
+          Clear Filter
         </li>
       </ul>
     </>

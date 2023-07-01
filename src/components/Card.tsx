@@ -1,14 +1,17 @@
+import React from "react";
 import axios from "axios";
-import { useEmail } from "../context/EmailContext";
+import { useData } from "../context/DataContext";
 import styles from "./card.module.css";
 import { DateComponent } from "./Date";
-export const Card = ({ data }) => {
-  const { dispatch } = useEmail();
+import { EmailDataType } from "../reducer/dataReducer";
+export const Card = ({ data }: { data: EmailDataType }) => {
+  const { dispatch } = useData();
 
-  async function addRead(id) {
+  async function addRead(id: string) {
     const { data: bodyData } = await axios.get(
       `https://flipkart-email-mock.now.sh/?id=${id}`
     );
+    console.log(bodyData);
     dispatch({
       type: "UPDATE_BODY",
       payload: bodyData,

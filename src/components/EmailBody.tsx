@@ -1,16 +1,18 @@
-import { useEmail } from "../context/EmailContext";
+import React from "react";
+import { useData } from "../context/DataContext";
 import { DateComponent } from "./Date";
 import styles from "./EmailBody.module.css";
 
 export const EmailBody = () => {
-  const { apiData, body, dispatch } = useEmail();
+  const { emailData, body, dispatch } = useData();
   const ToggleFavorite = () => {
     dispatch({
       type: "TOGGLE_FAVORITES",
       payload: body.id,
     });
   };
-  const email = apiData.filter((item) => item.id === body.id)[0];
+
+  const email = emailData.filter((item) => item.id === body.id)[0];
   console.log(email);
   return (
     <div className={styles.body}>

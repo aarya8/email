@@ -1,21 +1,22 @@
-import { useEmail } from "../context/EmailContext";
+import React from "react";
+import { useData } from "../context/DataContext";
 import { Card } from "./Card";
 
 export const CardLayout = () => {
-  const { filter, apiData, pageno } = useEmail();
-  let data;
+  const { filter, emailData, pageno } = useData();
+  let data = emailData;
   switch (filter) {
     case "":
-      data = apiData;
+      data = emailData;
       break;
     case "read":
-      data = apiData.filter((item) => item.read === true);
+      data = emailData.filter((item) => item.read === true);
       break;
     case "unread":
-      data = apiData.filter((item) => item.read === false);
+      data = emailData.filter((item) => item.read === false);
       break;
     case "favorites":
-      data = apiData.filter((item) => item.favorite === true);
+      data = emailData.filter((item) => item.favorite === true);
       break;
 
     default:

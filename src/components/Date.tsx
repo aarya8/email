@@ -1,4 +1,7 @@
-export const DateComponent = ({ data }) => {
+import React from "react";
+import { EmailDataType } from "../reducer/dataReducer";
+
+export const DateComponent = ({ data }: { data: EmailDataType }) => {
   const date = new Date(data.date);
   const dd = date.getDate();
   const mm = date.getMonth() + 1;
@@ -8,7 +11,7 @@ export const DateComponent = ({ data }) => {
 
   let hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
   const am_pm = date.getHours() >= 12 ? "am" : "pm";
-  hours = hours < 10 ? "0" + hours : hours;
+  hours = hours < 10 ? 0 + hours : hours;
   const minutes =
     date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
   const time = hours + ":" + minutes + am_pm;

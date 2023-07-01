@@ -1,14 +1,14 @@
-import { useEmail } from "../context/EmailContext";
+import React from "react";
+import { useData } from "../context/DataContext";
 import styles from "./pageno.module.css";
 export const Pageno = () => {
-  const { dispatch, pageno } = useEmail();
-  function changePage(page) {
+  const { dispatch } = useData();
+  function changePage(page: number) {
     dispatch({
       type: "CHANGE_PAGENO",
       payload: page,
     });
   }
-  console.log(pageno);
   return (
     <div className={styles.pageContainer}>
       <span>Page no:</span>
